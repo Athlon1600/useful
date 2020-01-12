@@ -11,15 +11,20 @@ bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/goog
 ```
 
 
-## Install Squid
+## Squid
 
-Open proxy server with port 8080 fully open and accessible to everyone:
+Open and anonymous proxy server with port 8080 fully open and accessible to everyone:
 
 ```shell
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/squid/install.sh)
-wget https://raw.githubusercontent.com/Athlon1600/useful/master/squid/squid-open.conf -O /etc/squid/squid.conf
-squid -k reconfigure
 ```
+
+Open + Anonymous + blocking all hosts except for youtube.
+
+```shell
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/squid/open-youtube.sh)
+```
+
 
 ## Install youtube-dl
 
