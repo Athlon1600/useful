@@ -1,12 +1,6 @@
 # useful
 
-
-## Run from shell
-
-```shell
-bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/google/bigquery.sh)
-```
-
+Useful shortcuts and bash scripts for many popular stacks.
 
 ## Squid
 
@@ -33,7 +27,7 @@ Check if YouTube is blocked:
 > curl -I -X GET https://www.youtube.com/watch?v=S0DRch3YLh0
 
 
-### NGINX + PHP 7.3
+## NGINX + PHP 7.3
 
 > sudo add-apt-repository ppa:ondrej/php
 
@@ -68,6 +62,14 @@ sudo certbot --nginx --agree-tos --register-unsafely-without-email --no-redirect
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 sudo apt-get -y install redis-server
 ```
+
+
+## Google Big Query
+
+```shell
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/google/bigquery.sh)
+```
+
 
 ### Links
 
