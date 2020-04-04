@@ -2,6 +2,10 @@
 
 Useful shortcuts and bash scripts for many popular stacks.
 
+```shell
+apt-get upgrade && apt-get dist-upgrade
+```
+
 ## Squid
 
 Open and anonymous proxy server with port 8080 fully open and accessible to everyone:
