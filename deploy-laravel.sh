@@ -1,4 +1,7 @@
+#!/usr/bin/env bash
+
 cd /var/www/newsite.com
+
 git pull origin master
 composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
 echo "" | sudo -S service php7.3-fpm reload
