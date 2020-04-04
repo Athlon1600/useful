@@ -3,7 +3,7 @@
 Useful shortcuts and bash scripts for many popular stacks.
 
 ```shell
-apt-get upgrade && apt-get dist-upgrade
+apt-get update && apt-get dist-upgrade
 ```
 
 ## Squid
