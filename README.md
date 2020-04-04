@@ -46,7 +46,20 @@ Complete:
 sudo apt-get -y install nginx php7.3-fpm php7.3-curl php7.3-mbstring php7.3-zip php7.3-dom php7.3-mysql
 ```
 
+```shell
+ln -s /etc/nginx/sites-available/newsite.com /etc/nginx/sites-enabled/
+```
+
+## Laravel
+
+```shell
+sudo chown -R www-data:www-data /var/www/unblockvideos.com/storage
+php artisan key:generate
+```
+
 - https://laravel.com/docs/6.x/deployment#nginx
+- https://laravel.com/docs/7.x/deployment#nginx
+
 
 ## Let's Encrypt
 
