@@ -48,6 +48,7 @@ sudo apt-get -y install nginx php7.3-fpm php7.3-curl php7.3-mbstring php7.3-zip 
 
 Extra:
 ```shell
+apt-get -y install php7.3-zip
 apt-get -y install build-essential
 ```
 
