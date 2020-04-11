@@ -103,6 +103,23 @@ Block IP
 > iptables -A INPUT -s 195.201.192.154 -j DROP
 
 
+## php + SSL
+
+cURL error 60: SSL certificate problem: unable to get local issuer certificate (see https://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+```bash
+wget https://curl.haxx.se/ca/cacert.pem
+mv cacert.pem /etc/php/7.3/cacert.pem
+
+echo "curl.cainfo=\"/etc/php/7.3/cacert.pem\"" >> /etc/php/7.3/cli/php.ini
+```
+
+misc other:
+> php -r "var_dump(ini_get('curl.cainfo'));"
+
+> php -r "var_dump(openssl_get_cert_locations());" 
+
+
 ## Redis
 
 ```shell
