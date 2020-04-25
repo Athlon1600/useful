@@ -133,6 +133,15 @@ bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/goog
 ```
 
 
+### Misc
+
+> dmesg -T
+
+Recently modified log files.
+
+> ls -lhrt /var/log
+
+
 ### Links
 
 https://github.com/digitalocean/do_user_scripts
