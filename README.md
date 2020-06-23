@@ -137,6 +137,12 @@ sudo apt-get -y install redis-server
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/google/bigquery.sh)
 ```
 
+## Java
+
+```shell
+sudo apt install default-jre
+wget https://raw.githubusercontent.com/Athlon1600/useful/master/java/run.sh
+```
 
 ### Misc
 
