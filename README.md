@@ -140,7 +140,7 @@ bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/goog
 ## Java
 
 ```shell
-sudo apt install default-jre
+sudo apt-get -y install default-jre
 wget https://raw.githubusercontent.com/Athlon1600/useful/master/java/run.sh
 ```
 
