@@ -82,13 +82,19 @@ php artisan key:generate
 wget -O deploy.sh https://raw.githubusercontent.com/Athlon1600/useful/master/deploy-laravel.sh
 ```
 
+## Nginx + Express
+
+Configuration to proxy all requests backend to node express server running on port 3000.
+
+```shell
+wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/Athlon1600/useful/master/nginx/express.conf
+```
+
+Restart the server.
 
 ## Let's Encrypt
 
-> sudo add-apt-repository --remove ppa:certbot/certbot
-
 ```shell
-bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/certbot/nginx.sh)
 sudo snap install --classic certbot
 
 sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
