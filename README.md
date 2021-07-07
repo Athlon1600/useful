@@ -89,6 +89,7 @@ wget -O deploy.sh https://raw.githubusercontent.com/Athlon1600/useful/master/dep
 
 ```shell
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/certbot/nginx.sh)
+sudo snap install --classic certbot
 
 sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
 sudo certbot --nginx --agree-tos --register-unsafely-without-email --no-redirect
