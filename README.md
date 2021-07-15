@@ -14,9 +14,14 @@ Open and anonymous proxy server with port 8080 fully open and accessible to ever
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/squid/install.sh)
 ```
 
-Install it under a custom port:
+Host Squid on a custom port:
 ```shell
-bash <(wget -O - https://www.proxynova.com/scripts/install_squid?port=8090)
+bash <(wget -O - https://www.proxynova.com/scripts/install_squid?port=8080)
+```
+
+Install Squid with username & password:
+```shell
+bash <(wget -O - https://www.proxynova.com/scripts/install_squid?port=8080&username=joe&password=hunter)
 ```
 
 Open + Anonymous + blocking all hosts except for youtube.
