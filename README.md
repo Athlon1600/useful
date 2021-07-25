@@ -21,7 +21,7 @@ bash <(wget -O - https://www.proxynova.com/scripts/install_squid?port=8080)
 
 Install Squid with username & password:
 ```shell
-bash <(wget -O - https://www.proxynova.com/scripts/install_squid?port=8080&username=joe&password=hunter)
+bash <(wget -O - "https://www.proxynova.com/scripts/install_squid?port=8080&username=joe&password=hunter")
 ```
 
 Open + Anonymous + blocking all hosts except for youtube.
