@@ -137,6 +137,21 @@ misc other:
 > php -r "var_dump(openssl_get_cert_locations());" 
 
 
+## Aria2 - download file in parts in parallel
+
+```bash
+sudo apt-get -y install snapd
+sudo snap install aria2c
+
+// extra
+sudo snap install core
+export PATH=$PATH:/snap/bin
+
+aria2c -x 10 https://archive.org/download/YouTubeCrawlSurveyDataset2009-2010/ytdata.sql.xz
+```
+
+
+
 ## Redis
 
 ```shell
