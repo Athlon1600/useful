@@ -183,6 +183,12 @@ aws configure set aws_access_key_id ACCESS_KEY_HERE ; aws configure set aws_secr
 aws s3 cp . s3://bucket/folder --recursive --storage-class REDUCED_REDUNDANCY
 ```
 
+### MySQL
+
+```bash
+mysqldump --ssl-mode=DISABLED --column-statistics=0 --host mysql.server.com -u root -pPASSWORD database > database.sql
+```
+
 ### Misc
 
 > dmesg -T
