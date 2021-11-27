@@ -147,7 +147,7 @@ sudo snap install aria2c
 sudo snap install core
 export PATH=$PATH:/snap/bin
 
-aria2c -x 10 https://archive.org/download/YouTubeCrawlSurveyDataset2009-2010/ytdata.sql.xz
+aria2c -x 16 -j 16 https://archive.org/download/YouTubeCrawlSurveyDataset2009-2010/ytdata.sql.xz
 ```
 
 
