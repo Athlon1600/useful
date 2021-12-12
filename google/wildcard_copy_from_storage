@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in {000000000000..000000000114}; do
+    echo "$i"
+    gsutil cp gs://unblockvideos_youtube/dislike_export/data_"$i" ./public/dislike_export/file_"$i"
+done
