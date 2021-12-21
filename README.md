@@ -186,6 +186,7 @@ aws s3 cp . s3://bucket/folder --recursive --storage-class REDUCED_REDUNDANCY
 ### MySQL
 
 ```bash
+sudo apt-get -y install mysql-client
 mysqldump --ssl-mode=DISABLED --column-statistics=0 --host mysql.server.com -u root -pPASSWORD database > database.sql
 ```
 
