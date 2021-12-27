@@ -30,6 +30,14 @@ Open + Anonymous + blocking all hosts except for youtube.
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/squid/open-youtube.sh)
 ```
 
+---
+
+```bash
+## number of "open files" by process
+
+lsof | awk '{print $1}' | uniq -c | sort -n
+```
+
 
 ## Install youtube-dl
 
