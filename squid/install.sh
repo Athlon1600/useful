@@ -15,4 +15,10 @@ else
 fi
 
 wget https://raw.githubusercontent.com/Athlon1600/useful/master/squid/squid-open.conf -O /etc/squid/squid.conf
-squid -k reconfigure
+
+## for some reason reconfigure fails on CentOS
+if [ $CENTOS -eq 1 ]; then
+    service squid restart
+else
+    squid -k reconfigure
+fi
