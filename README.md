@@ -8,27 +8,17 @@ apt-get update && apt-get -y dist-upgrade
 
 ## Squid
 
-Open and anonymous proxy server with port 8080 fully open and accessible to everyone:
+Install anonymous proxy server with port 8080 fully open and accessible to everyone:
 
 ```shell
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/squid/install.sh)
 ```
 
-Host Squid on a custom port:
-```shell
-bash <(wget -O - https://www.proxynova.com/scripts/install_squid?port=8080)
-```
+Generate custom Squid installation script:
 
-Install Squid with username & password:
-```shell
-bash <(wget -O - "https://www.proxynova.com/scripts/install_squid?port=8080&username=joe&password=hunter")
-```
+[![](https://i.imgur.com/kJjVkPJ.png)](https://www.proxynova.com/proxy-articles/install-squid-proxy-server)
 
-Open + Anonymous + blocking all hosts except for youtube.
-
-```shell
-bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/squid/open-youtube.sh)
-```
+- https://www.proxynova.com/proxy-articles/install-squid-proxy-server
 
 ---
 
