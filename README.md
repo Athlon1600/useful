@@ -198,6 +198,13 @@ sudo apt-get -y install mysql-client
 mysqldump --ssl-mode=DISABLED --column-statistics=0 --host mysql.server.com -u root -pPASSWORD database > database.sql
 ```
 
+Backup & Restore from S3
+
+```bash
+mysqldump -u root -p --single-transaction --databases db1 db2 | gzip -9 | aws s3 cp - s3://bucket/dump.sql.gz --storage-class ONEZONE_IA
+mysql -u root -p < dump.sql
+```
+
 ### Misc
 
 > dmesg -T
