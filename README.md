@@ -148,7 +148,16 @@ export PATH=$PATH:/snap/bin
 aria2c -x 16 -j 16 https://archive.org/download/YouTubeCrawlSurveyDataset2009-2010/ytdata.sql.xz
 ```
 
+`urls.txt`:
 
+```text
+https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
+	out=logo.png
+```
+
+```bash
+aria2c -iurls.txt -x 16 -j 16
+```
 
 ## Redis
 
