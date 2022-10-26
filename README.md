@@ -166,6 +166,12 @@ https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.p
 aria2c -iurls.txt -x 16 -j 16
 ```
 
+## Streamlink
+
+```bash
+streamlink https://site.com/index.m3u8 best -o best.mp4 --http-header "Referer=https://www.youtube.com"
+```
+
 ## Redis
 
 ```shell
