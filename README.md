@@ -226,6 +226,55 @@ Recently modified log files.
 > ls -lhrt /var/log
 
 
+## Git
+
+Force current folder force to existing repository.
+
+```bash
+
+git init
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/Athlon1600/proxy-checker.git
+
+git remote -v
+git remote show origin
+
+git push -f origin master
+```
+
+## ffmpeg
+
+add subtitles to existing video
+
+```bash
+ffmpeg -i subtitles.srt subtitles.ass
+ffmpeg -i video.mkv -vf ass=subtitles.ass output.mp4
+```
+
+![ffmpeg](https://user-images.githubusercontent.com/1063088/148630169-22b9ff02-6a1e-420a-b216-60f4832c5f8d.png)
+
+extract exactly 1 hour of video starting at 10 seconds
+
+```bash
+ffmpeg -i "input.mp4" -ss 00:00:10.0 -t 01:00:10.0 -c copy output.mp4
+ffmpeg -i "input.mp4" -ss 00:00:01.0 -t 00:00:10.0 -c:v libx264 -c:a aac -strict experimental -b:a 128k output.mp4
+```
+
+Combine image and audio into video:
+
+```bash
+ffmpeg -loop 1 -f image2 -r 2 -i image.jpg -i audio.mp3 -shortest result.mp4
+```
+
+download playlist
+
+```bash
+ffmpeg -i https://example.com/index.m3u8 -c copy -bsf:a aac_adtstoasc vod.mp4
+```
+
+- https://www.proxynova.com/articles/trim-videos-using-ffmpeg
+
 ### Links
 
 https://github.com/digitalocean/do_user_scripts
