@@ -29,7 +29,9 @@ lsof | awk '{print $1}' | uniq -c | sort -n
 ```
 
 
-## Install youtube-dl
+## youtube-dl/yt-dlp
+
+Install:
 
 ```shell
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/youtube-dl.sh)
@@ -38,6 +40,18 @@ bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/useful/master/yout
 Check if YouTube is blocked:
 > curl -I -X GET https://www.youtube.com/watch?v=S0DRch3YLh0
 
+Download all URLs in file:
+
+```shell
+yt-dlp --batch-file "batch.txt" -o "%(upload_date)s-%(title)s.%(ext)s"
+```
+
+Download entire channel slowly:
+
+```shell
+youtube-dl -o "%(upload_date)s %(title)s.%(ext)s" -f best -ciw --sleep-interval 30 --max-sleep-interval 90 https://www.youtube.com/@AlfoMedia
+yt-dlp -o "%(upload_date)s %(title)s.%(ext)s" -f best -ciw --sleep-interval 30 --max-sleep-interval 90 https://www.youtube.com/@AlfoMedia
+```
 
 ## NGINX + PHP 7.3
 
