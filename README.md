@@ -53,6 +53,18 @@ youtube-dl -o "%(upload_date)s %(title)s.%(ext)s" -f best -ciw --sleep-interval 
 yt-dlp -o "%(upload_date)s %(title)s.%(ext)s" -f best -ciw --sleep-interval 30 --max-sleep-interval 90 https://www.youtube.com/@AlfoMedia
 ```
 
+## Apache Bench
+
+Download Windows binaries from - https://www.apachelounge.com/download/
+
+```shell
+# -n = number of requests
+# -c = Number of multiple requests to perform at a time
+# -k = enable KeepAlive which is off by default
+
+ab -n 1000 -c 30 -k http://example.com
+```
+
 ## NGINX + PHP 7.3
 
 > sudo add-apt-repository ppa:ondrej/php
