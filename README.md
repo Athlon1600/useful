@@ -65,6 +65,12 @@ Download Windows binaries from - https://www.apachelounge.com/download/
 ab -n 1000 -c 30 -k http://example.com
 ```
 
+## Siege
+
+```shell
+sudo apt-get install siege -y
+```
+
 ## NGINX + PHP 7.3
 
 > sudo add-apt-repository ppa:ondrej/php
