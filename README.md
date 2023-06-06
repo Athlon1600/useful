@@ -203,6 +203,7 @@ aria2c -iurls.txt -x 16 -j 16
 
 ```bash
 streamlink https://site.com/index.m3u8 best -o best.mp4 --http-header "Referer=https://www.youtube.com"
+streamlink https://site.com/index.m3u8 best -o streamlink.mp4 --http-header "Referer=https://www.youtube.com" --retry-streams 5 --retry-max 9999 --stream-segment-attempts 9999 --hls-playlist-reload-attempts 9999 --dash-manifest-reload-attempts 9999 --stream-segment-attempts 9999
 ```
 
 ## Redis
