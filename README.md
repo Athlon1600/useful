@@ -150,9 +150,16 @@ sudo apt-get -y install build-essential python-pip
 pip install ngxtop
 ```
 
-Request count by IP:
-> ngxtop top remote_addr -n 30
-> docker logs --tail 1000 -f nginx | cat | ngxtop top remote_addr -n 30
+Usage:
+
+```shell
+ngxtop -n 30
+docker logs --tail 1000 -f nginx | cat | ngxtop -n 30
+
+// Request count by IP:
+ngxtop top remote_addr -n 30
+docker logs --tail 1000 -f nginx | cat | ngxtop top remote_addr -n 30
+```
 
 Block IP
 > iptables -A INPUT -s 195.201.192.154 -j DROP
