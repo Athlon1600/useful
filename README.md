@@ -96,6 +96,21 @@ apt-get -y install build-essential
 ln -s /etc/nginx/sites-available/newsite.com /etc/nginx/sites-enabled/
 ```
 
+## Caddy
+
+Install Caddy
+
+```shell
+curl -sS https://raw.githubusercontent.com/Athlon1600/chat/master/scripts/caddy.sh | sh
+```
+
+Launch simple static file server in current directory with automatic HTTTPS:
+
+```shell
+pkill caddy
+nohup caddy file-server --browse --root ./ --domain files.server.com > /dev/null 2>&1 &
+```
+
 ## Composer
 
 ```shell
