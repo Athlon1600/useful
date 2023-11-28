@@ -104,6 +104,14 @@ Install Caddy
 curl -sS https://raw.githubusercontent.com/Athlon1600/chat/master/scripts/caddy.sh | sh
 ```
 
+From static binary (Ubuntu)
+```shell
+wget --quiet https://github.com/caddyserver/caddy/releases/download/v2.7.5/caddy_2.7.5_linux_amd64.tar.gz && tar -xzf caddy_2.7.5_linux_amd64.tar.gz
+rm -rf caddy_2.7.5_linux_amd64.tar.gz && rm -rf LICENSE && rm -rf README.md
+chmod +x caddy
+mv caddy /usr/local/bin/caddy
+```
+
 Launch simple static file server in current directory with automatic HTTTPS:
 
 ```shell
