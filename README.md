@@ -106,10 +106,7 @@ curl -sS https://raw.githubusercontent.com/Athlon1600/chat/master/scripts/caddy.
 
 From static binary (Ubuntu)
 ```shell
-wget --quiet https://github.com/caddyserver/caddy/releases/download/v2.7.5/caddy_2.7.5_linux_amd64.tar.gz && tar -xzf caddy_2.7.5_linux_amd64.tar.gz
-rm -rf caddy_2.7.5_linux_amd64.tar.gz && rm -rf LICENSE && rm -rf README.md
-chmod +x caddy
-mv caddy /usr/local/bin/caddy
+wget -qO- https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_linux_amd64.tar.gz && tar -xz && rm -f caddy_2.7.6_linux_amd64.tar.gz LICENSE README.md && chmod +x caddy && mv caddy /usr/local/bin/caddy
 ```
 
 Launch simple static file server in current directory with automatic HTTTPS:
