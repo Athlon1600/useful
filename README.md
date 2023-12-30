@@ -116,6 +116,21 @@ pkill caddy
 nohup caddy file-server --browse --root ./ --domain files.server.com > /dev/null 2>&1 &
 ```
 
+Show requests as they happen:
+```shell
+tail -F /var/log/caddy/access.log | jq -r '"\(.request.host)\t\(.request.uri)"'
+```
+
+Top Request URIs:
+```shell
+tail -n 9000 /var/log/caddy/access.log | jq -r '.request.uri' | sort | uniq -c | sort -nr | head -n 30
+```
+
+Top client IPs (useful during DDOS attack):
+```shell
+tail -n 9000 /var/log/caddy/access.log | jq -r '.request.remote_ip' | sort | uniq -c | sort -nr | head -n 30
+```
+
 ## Composer
 
 ```shell
