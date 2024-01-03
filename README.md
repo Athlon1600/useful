@@ -1,12 +1,8 @@
-# useful
+# :bulb: useful
 
-Useful shortcuts and bash scripts for many popular stacks.
+A list of useful commands and bash scripts for many popular stacks.
 
-```shell
-apt-get update && apt-get -y dist-upgrade
-```
-
-## Squid
+## Squid Http Proxy
 
 Install anonymous proxy server with port 8080 fully open and accessible to everyone:
 
