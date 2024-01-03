@@ -321,6 +321,14 @@ git push -f origin master
 
 ## ffmpeg
 
+Install `ffmpeg-amd64` from static binary, and move to `/usr/local/bin`:
+
+```shell
+curl -L https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz | tar -xJf - --strip-components=1 && rm -rf GPLv3.txt manpages model readme.txt && chmod +x ffmpeg ffprobe && mv ffmpeg /usr/local/bin/ffmpeg && mv ffprobe /usr/local/bin/ffprobe
+```
+
+- https://johnvansickle.com/ffmpeg/
+
 add subtitles to existing video
 
 ```bash
