@@ -267,13 +267,14 @@ wget https://raw.githubusercontent.com/Athlon1600/useful/master/java/run.sh
 ## AWS
 
 ```shell
-sudo apt-get -y install awscli
+apt-get install -y unzip curl
+curl -L "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install
 
 ## authenticate
 aws configure set aws_access_key_id ACCESS_KEY_HERE ; aws configure set aws_secret_access_key SECRET_KEY_GOES_HERE
 
 ## copy all files from current directory to a directory on s3 bucket
-aws s3 cp . s3://bucket/folder --recursive --storage-class REDUCED_REDUNDANCY
+aws s3 cp . s3://bucket/folder --recursive --storage-class ONEZONE_IA
 ```
 
 ### MySQL
