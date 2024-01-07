@@ -193,9 +193,15 @@ ngxtop top remote_addr -n 30
 docker logs --tail 1000 -f nginx | cat | ngxtop top remote_addr -n 30
 ```
 
-Block IP
-> iptables -A INPUT -s 195.201.192.154 -j DROP
+Block IP:
+```shell
+iptables -A INPUT -s 195.201.192.154 -j DROP
+```
 
+Add `block_ip IP_ADDRESS` command to your linux:
+```shell
+echo 'block_ip() { iptables -A INPUT -s "$1" -j DROP; }' >> ~/.bashrc && source ~/.bashrc
+```
 
 ## php + SSL
 
