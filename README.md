@@ -297,6 +297,14 @@ mysqldump -u root -p --single-transaction --databases db1 db2 | gzip -9 | aws s3
 mysql -u root -p < dump.sql
 ```
 
+## Speedtest by Ookla
+
+One liner install for Ubuntu:
+
+```shell
+curl -sL https://install.speedtest.net/app/cli/ookla-speedtest-1.2.0-linux-x86_64.tgz | tar -xz && chmod +x speedtest && mv speedtest /usr/local/bin/speedtest
+```
+
 ### Misc
 
 > dmesg -T
