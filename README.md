@@ -123,6 +123,11 @@ Top Request URIs:
 tail -n 9000 /var/log/caddy/access.log | jq -r '.request.uri' | sort | uniq -c | sort -nr | head -n 30
 ```
 
+Top Request URIs from some IP:
+```shell
+tail -n 9000 /var/log/caddy/access.log | jq 'select(.request.remote_ip == "192.0.2.4")' | jq -r '.request.uri' | sort | uniq -c | sort -nr | head -n 30
+```
+
 Top client IPs (useful during DDOS attack):
 ```shell
 tail -n 9000 /var/log/caddy/access.log | jq -r '.request.remote_ip' | sort | uniq -c | sort -nr | head -n 30
