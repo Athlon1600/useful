@@ -2,6 +2,12 @@
 
 A list of useful commands and bash scripts for many popular stacks.
 
+## Install Docker / Docker Compose
+
+```shell
+curl -sSL https://get.docker.com/ | sh
+```
+
 ## Squid Http Proxy
 
 Install anonymous proxy server with port 8080 fully open and accessible to everyone:
