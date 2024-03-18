@@ -299,7 +299,7 @@ aws configure set aws_access_key_id ACCESS_KEY_HERE ; aws configure set aws_secr
 aws s3 cp . s3://bucket/folder --recursive --storage-class ONEZONE_IA
 ```
 
-### MySQL
+## MySQL - Backup/Restore
 
 Install client first:
 
