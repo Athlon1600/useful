@@ -301,17 +301,50 @@ aws s3 cp . s3://bucket/folder --recursive --storage-class ONEZONE_IA
 
 ### MySQL
 
-```bash
+Install client first:
+
+```shell
 sudo apt-get -y install mysql-client
+```
+
+Logical Backup:
+
+```bash
+mysqldump -u root -pPASSWORD --quick --max_allowed_packet=512M --verbose --databases db_name > db_name.sql
+mysqldump -u root -pPASSWORD --quick --max_allowed_packet=512M --verbose --all-databases > all_databases.sql
+
+## backup directly to AWS S3
+mysqldump -u root -p --single-transaction --databases db1 db2 | gzip -9 | aws s3 cp - s3://bucket_name/$(date +%Y-%m-%d-%s)/dump.sql.gz --storage-class ONEZONE_IA
+
+## backup from REMOTE server
 mysqldump --ssl-mode=DISABLED --column-statistics=0 --host mysql.server.com -u root -pPASSWORD database > database.sql
 ```
-
-Backup & Restore from S3
+Physical Backup:
 
 ```bash
-mysqldump -u root -p --single-transaction --databases db1 db2 | gzip -9 | aws s3 cp - s3://bucket/$(date +%Y-%m-%d-%s)/dump.sql.gz --storage-class ONEZONE_IA
-mysql -u root -p < dump.sql
+sudo service mysql stop
+sudo cp -R /var/lib/mysql/. /root/backups
+tar cfvz /root/db-$(date +%F).tar.gz /root/backups/*
+sudo service mysql start
 ```
+
+Move `/var/lib/mysql` from one server to another
+
+```bash
+sudo service mysql stop
+rsync --archive --verbose --stats --progress --human-readable /var/lib/mysql/* root@server.com:/var/lib/mysql/
+sudo service mysql start
+```
+
+Store Backups to AWS S3:
+
+```bash
+aws s3 cp db_name.sql s3://bucket_name/backups/$(date +%Y-%m-%d)/db_name.sql --storage-class ONEZONE_IA
+aws s3 cp db_name.sql s3://bucket_name/backups/$(date +%Y-%m-%d-%s)/db_name.sql --storage-class ONEZONE_IA
+```
+
+More links
+- https://mysqldump.guru/
 
 ## Speedtest by Ookla
 
