@@ -112,6 +112,11 @@ From static binary (Ubuntu)
 curl -sL https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_linux_amd64.tar.gz | tar -xz && rm -f caddy_2.7.6_linux_amd64.tar.gz LICENSE README.md && chmod +x caddy && mv caddy /usr/local/bin/caddy
 ```
 
+From caddyserver.com with rate limiting extension:
+```shell
+curl -o caddy -sL "https://caddyserver.com/api/download?os=linux&arch=amd64&p=github.com/RussellLuo/caddy-ext/ratelimit" && chmod +x caddy && mv caddy /usr/local/bin/caddy
+```
+
 Launch simple static file server in current directory with automatic HTTTPS:
 
 ```shell
