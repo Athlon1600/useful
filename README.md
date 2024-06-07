@@ -72,6 +72,8 @@ ab -n 1000 -c 30 -k http://example.com
 
 ```shell
 sudo apt-get install siege -y
+siege -c 500 -r 5000 https://example.com/
+siege -c 600 --time=5M https://example.com/
 ```
 
 ## NGINX + PHP 7.3
