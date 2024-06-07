@@ -76,6 +76,13 @@ siege -c 500 -r 5000 https://example.com/
 siege -c 600 --time=5M https://example.com/
 ```
 
+Also edit:
+```shell
+vim $HOME/.siege/siege.conf 
+```
+
+and raise `limit` from default 255.
+
 ## NGINX + PHP 7.3
 
 > sudo add-apt-repository ppa:ondrej/php
