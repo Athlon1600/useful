@@ -182,8 +182,7 @@ wget -O deploy.sh https://raw.githubusercontent.com/Athlon1600/useful/master/dep
 ## Node.js
 
 ```shell
-curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash - 
-sudo apt-get install -y nodejs
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt-get install -y nodejs
 ```
 
 ## Nginx + Express
