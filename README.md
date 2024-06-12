@@ -130,7 +130,7 @@ Launch simple static file server in current directory with automatic HTTTPS:
 
 ```shell
 pkill caddy
-nohup caddy file-server --browse --root ./ --domain files.server.com > /dev/null 2>&1 &
+nohup caddy file-server --root ./ --browse --listen :50519 > /dev/null 2>&1 %
 ```
 
 Show requests as they happen:
