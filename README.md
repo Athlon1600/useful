@@ -118,7 +118,7 @@ curl -sS https://raw.githubusercontent.com/Athlon1600/chat/master/scripts/caddy.
 
 From static binary (Ubuntu)
 ```shell
-curl -sL https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_linux_amd64.tar.gz | tar -xz && rm -f caddy_2.7.6_linux_amd64.tar.gz LICENSE README.md && chmod +x caddy && mv caddy /usr/local/bin/caddy
+curl -sL https://github.com/caddyserver/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_amd64.tar.gz | tar -xz && rm -f caddy_2.8.4_linux_amd64.tar.gz LICENSE README.md && chmod +x caddy && mv caddy /usr/local/bin/caddy
 ```
 
 From caddyserver.com with rate limiting extension:
