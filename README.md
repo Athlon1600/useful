@@ -108,7 +108,7 @@ apt-get -y install build-essential
 ln -s /etc/nginx/sites-available/newsite.com /etc/nginx/sites-enabled/
 ```
 
-## Caddy
+## :lock: Caddy
 
 Install latest version of Caddy from static binary (Ubuntu)
 
