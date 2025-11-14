@@ -108,7 +108,7 @@ apt-get -y install build-essential
 ln -s /etc/nginx/sites-available/newsite.com /etc/nginx/sites-enabled/
 ```
 
-## :lock: Caddy
+## :lock: Caddy - Web Server with automatic HTTPS
 
 Install latest version of Caddy from static binary (Ubuntu)
 
