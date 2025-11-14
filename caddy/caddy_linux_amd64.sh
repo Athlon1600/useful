@@ -10,3 +10,5 @@ rm -f LICENSE README.md
 
 chmod +x caddy
 mv caddy /usr/local/bin/caddy
+
+echo -e "\e[32m\u2705 Caddy version ${CADDY_VERSION} was installed successfully! \e[0m"

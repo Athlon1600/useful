@@ -110,15 +110,10 @@ ln -s /etc/nginx/sites-available/newsite.com /etc/nginx/sites-enabled/
 
 ## Caddy
 
-Install Caddy
+Install latest version of Caddy from static binary (Ubuntu)
 
 ```shell
-curl -sS https://raw.githubusercontent.com/Athlon1600/chat/master/scripts/caddy.sh | sh
-```
-
-From static binary (Ubuntu)
-```shell
-curl -sL https://github.com/caddyserver/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_amd64.tar.gz | tar -xz && rm -f caddy_2.8.4_linux_amd64.tar.gz LICENSE README.md && chmod +x caddy && mv caddy /usr/local/bin/caddy
+wget -qO- https://raw.githubusercontent.com/Athlon1600/useful/master/caddy/caddy_linux_amd64.sh | bash
 ```
 
 From caddyserver.com with rate limiting extension:
