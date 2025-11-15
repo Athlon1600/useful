@@ -8,6 +8,12 @@ A list of useful commands and bash scripts for many popular stacks.
 curl -fsSL https://get.docker.com/ | sh
 ```
 
+Optionally, you can still install `docker-compose`:
+
+```shell
+curl -sL "https://github.com/docker/compose/releases/download/v2.40.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+```
+
 ## Squid Http Proxy
 
 Install anonymous proxy server with port 8080 fully open and accessible to everyone:
