@@ -2,10 +2,10 @@
 
 A list of useful commands and bash scripts for many popular stacks.
 
-## Install Docker / Docker Compose
+## :whale2: Install Docker / Docker Compose
 
 ```shell
-curl -sSL https://get.docker.com/ | sh
+curl -fsSL https://get.docker.com/ | sh
 ```
 
 ## Squid Http Proxy
