@@ -1,6 +1,6 @@
 # :bulb: useful
 
-A list of useful commands and bash scripts for many popular stacks.
+A list of useful commands, bash scripts, and one-liners for many popular stacks.
 
 ## :whale2: Install Docker / Docker Compose
 
@@ -396,13 +396,23 @@ git push -f origin master
 
 ## ffmpeg
 
-Install `ffmpeg-amd64` from static binary, and move to `/usr/local/bin`:
+Download `ffmpeg` as a static binary, and move it to `/usr/local/bin`:
 
 ```shell
-curl -L https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz | tar -xJf - --strip-components=1 && rm -rf GPLv3.txt manpages model readme.txt && chmod +x ffmpeg ffprobe && mv ffmpeg /usr/local/bin/ffmpeg && mv ffprobe /usr/local/bin/ffprobe
+curl -L --fail https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar --no-same-owner -xJf - && mv ffmpeg-*-static/ffmpeg ffmpeg-*-static/ffprobe /usr/local/bin/ && rm -rf ffmpeg-*-static
 ```
 
 - https://johnvansickle.com/ffmpeg/
+
+--
+
+Another source (https://github.com/BtbN/FFmpeg-Builds):
+
+```shell
+curl -L --fail https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n8.0-latest-linux64-gpl-8.0.tar.xz | tar --no-same-owner -xJf - && mv ffmpeg-*/bin/ffmpeg ffmpeg-*/bin/ffprobe /usr/local/bin/ && rm -rf ffmpeg-*-gpl-8.0
+```
+
+
 
 add subtitles to existing video
 
