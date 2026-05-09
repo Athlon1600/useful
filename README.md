@@ -408,7 +408,7 @@ curl -L --fail https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-st
 Another source (https://github.com/BtbN/FFmpeg-Builds):
 
 ```shell
-curl -L --fail https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n8.0-latest-linux64-gpl-8.0.tar.xz | tar --no-same-owner -xJf - && mv ffmpeg-*/bin/ffmpeg ffmpeg-*/bin/ffprobe /usr/local/bin/ && rm -rf ffmpeg-*-gpl-8.0
+curl -L --fail https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n8.1-latest-linux64-gpl-8.1.tar.xz | tar --no-same-owner -xJf - && mv ffmpeg-*/bin/ffmpeg ffmpeg-*/bin/ffprobe /usr/local/bin/ && rm -rf ffmpeg-*-gpl-8.1
 ```
 
 
